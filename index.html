@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover amazing hotels and destinations around the world. Book your perfect getaway with exclusive deals and handpicked accommodations.">
+    <title>TravelScape - Discover Your Perfect Destination</title>
+    <!-- Modernizr for advanced feature detection -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">TravelScape</a>
+                <ul class="nav-menu">
+                    <li><a href="#destinations">Destinations</a></li>
+                    <li><a href="#hotels">Hotels</a></li>
+                    <li><a href="#deals">Deals</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Discover Your Next Adventure</h1>
+                <p class="hero-subtitle">Explore handpicked hotels and destinations from around the world</p>
+            </div>
+        </section>
+
+        <section class="filters" id="filters">
+            <div class="container">
+                <div class="filters-wrapper">
+                    <div class="filter-group">
+                        <label for="sort-select">Sort by:</label>
+                        <select id="sort-select" class="filter-select">
+                            <option value="featured">Featured</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Rating</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="location-select">Location:</label>
+                        <select id="location-select" class="filter-select">
+                            <option value="all">All Locations</option>
+                            <option value="europe">Europe</option>
+                            <option value="asia">Asia</option>
+                            <option value="americas">Americas</option>
+                            <option value="oceania">Oceania</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="price-select">Price Range:</label>
+                        <select id="price-select" class="filter-select">
+                            <option value="all">All Prices</option>
+                            <option value="budget">Budget ($-$$)</option>
+                            <option value="moderate">Moderate ($$-$$$)</option>
+                            <option value="luxury">Luxury ($$$$)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="destinations" id="destinations">
+            <div class="container">
+                <h2 class="section-title">Featured Destinations</h2>
+                <div class="destinations-grid" id="destinations-grid">
+                    <!-- Destination cards will be populated here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TravelScape</h3>
+                    <p>Your gateway to unforgettable experiences worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#destinations">Destinations</a></li>
+                        <li><a href="#hotels">Hotels</a></li>
+                        <li><a href="#deals">Special Deals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>support@travelscape.com</li>
+                        <li>+1 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TravelScape. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="detail-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close modal">&times;</button>
+            <div class="modal-body" id="modal-body">
+                <!-- Modal content will be populated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/feature-detection.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

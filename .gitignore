@@ -1,0 +1,29 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dependencies
+node_modules/
+package-lock.json
+
+# WebDriver binaries
+drivers/
+
+# Logs
+*.log
+
+# Test results
+test-results/
+
+# Environment variables
+.env
+.env.local
+
+# BrowserStack
+browserstack.err
