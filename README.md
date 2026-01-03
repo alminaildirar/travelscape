@@ -1,7 +1,5 @@
 # TravelScape - Hotel & Destination Explorer
 
-A modern, responsive travel and hotel booking interface built with vanilla HTML, CSS, and JavaScript. Features a mobile-first design approach with advanced filtering, sorting, and detail view capabilities.
-
 ## Features
 
 - **Fully Responsive Design** - Seamlessly adapts from mobile (320px) to large desktop (1920px+)
