@@ -1,6 +1,7 @@
 {
   "name": "travelscape",
   "version": "1.0.0",
+  "type": "module",
   "description": "A modern, responsive travel and hotel booking interface",
   "main": "index.html",
   "scripts": {
@@ -12,7 +13,12 @@
     "test:all": "node tests/selenium-all-browsers.js",
     "test:browserstack": "node tests/browserstack-test.js",
     "serve": "node tests/server.js",
-    "build:modernizr": "modernizr -c .modernizrrc -d js/modernizr-custom.js"
+    "build:modernizr": "modernizr -c .modernizrrc -d js/modernizr-custom.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"**/*.{js,json,css,html,md}\"",
+    "format:check": "prettier --check \"**/*.{js,json,css,html,md}\"",
+    "code-quality": "npm run format && npm run lint:fix"
   },
   "keywords": [
     "travel",
@@ -23,9 +29,15 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
     "edgedriver": "^5.6.1",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "globals": "^17.0.0",
     "http-server": "^14.1.1",
     "modernizr": "^3.13.1",
+    "prettier": "^3.7.4",
     "selenium-webdriver": "^4.15.0"
   },
   "engines": {
