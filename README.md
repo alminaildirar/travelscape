@@ -169,24 +169,30 @@ cd WebBasics
 The project includes comprehensive cross-browser compatibility features:
 
 #### CSS Features
+
 - **Vendor Prefixes**: `-webkit-`, `-moz-`, `-ms-`, `-o-` for maximum compatibility
 - **CSS Reset**: 22-point modern CSS reset for consistent rendering across browsers
 - **Fallback Styles**: Alternative styles for browsers without modern CSS support
 - **@supports Queries**: Feature detection for graceful degradation
 
 #### JavaScript Polyfills
+
 Included polyfills for legacy browsers (IE11+):
+
 - `Element.prototype.closest()`
 - `Element.prototype.matches()`
 - `Array.prototype.find()`
 - `NodeList.prototype.forEach()`
 
 #### Feature Detection
+
 The project uses both **Modernizr** (CDN) and custom feature detection:
+
 - **Modernizr**: Industry-standard feature detection library
 - **Custom Detection**: Lightweight runtime checks in `js/feature-detection.js`
 
 Automatic detection and fallbacks for:
+
 - CSS Grid → Flexbox fallback
 - CSS Variables → Hard-coded color values
 - Object-fit → Auto height adjustment
@@ -197,6 +203,7 @@ Automatic detection and fallbacks for:
 - Clamp() → Fixed font sizes with media queries
 
 #### Browser-Specific Fixes
+
 - Safari aspect-ratio fallback
 - IE11 grid fallback using flexbox
 - Firefox button focus styles
@@ -205,7 +212,9 @@ Automatic detection and fallbacks for:
 - Edge legacy support
 
 ### Testing Browsers
+
 The project has been tested on:
+
 - Modern browsers (Chrome, Firefox, Safari, Edge)
 - Mobile browsers (iOS Safari, Chrome Mobile)
 - Legacy browsers with polyfills (IE11 with limited support)
@@ -273,6 +282,7 @@ Edit the `destinations` array in `js/data.js`:
 Before running tests, ensure you have the required browsers and WebDrivers installed:
 
 #### Required Software
+
 - **Node.js** 14.0.0 or higher
 - **npm** (comes with Node.js)
 - Modern browsers: Chrome, Firefox, Edge (Windows) or Safari (macOS)
@@ -304,6 +314,7 @@ Before running tests, ensure you have the required browsers and WebDrivers insta
    ```
 
 **Safari (macOS only)**:
+
 1. Open Safari → Preferences → Advanced
 2. Enable "Show Develop menu in menu bar"
 3. Go to Develop → Allow Remote Automation
@@ -362,6 +373,7 @@ Total: 3/3 browsers passed
 ### Troubleshooting
 
 **Port 8080 already in use:**
+
 ```bash
 # Windows - Find and kill process
 netstat -ano | findstr :8080
@@ -371,11 +383,13 @@ lsof -i :8080
 ```
 
 **Edge driver not found:**
+
 - Ensure `msedgedriver.exe` is in the `drivers/` folder
 - Verify the driver version matches your Edge browser version
 - The `drivers/` folder is git-ignored, so you'll need to set it up on each machine
 
 **Tests timing out:**
+
 - Check your internet connection
 - Increase timeout values in test files if needed
 - Ensure no firewall is blocking localhost:8080
@@ -387,9 +401,11 @@ See [tests/README.md](tests/README.md) for detailed testing documentation.
 Test on real devices and browsers in the cloud:
 
 **Setup:**
+
 1. Sign up at [BrowserStack](https://www.browserstack.com/)
 2. Get your credentials from Account Settings
 3. Set environment variables:
+
    ```bash
    # Windows (PowerShell)
    $env:BROWSERSTACK_USERNAME="your_username"
@@ -401,11 +417,13 @@ Test on real devices and browsers in the cloud:
    ```
 
 **Run tests:**
+
 ```bash
 npm run test:browserstack
 ```
 
 **Tested Configurations:**
+
 - Desktop: Chrome, Firefox, Edge (Windows 11), Safari (macOS)
 - Mobile: iPhone 14 Pro, Samsung Galaxy S23, iPad Pro
 - Legacy: Internet Explorer 11 (Windows 10)

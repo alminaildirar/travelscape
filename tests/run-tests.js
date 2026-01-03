@@ -32,7 +32,7 @@ async function startServer() {
   const serverPath = path.join(__dirname, 'server.js');
   serverProcess = spawn('node', [serverPath], {
     stdio: 'inherit',
-    shell: true
+    shell: true,
   });
 
   // Wait for server to start
@@ -63,7 +63,7 @@ async function runTests() {
   console.log('🧪 TRAVELSCAPE - CROSS-BROWSER TESTING SUITE');
   console.log('='.repeat(70) + '\n');
 
-  let serverWasRunning = await isServerRunning();
+  const serverWasRunning = await isServerRunning();
 
   // Start server if not running
   if (!serverWasRunning) {
@@ -73,7 +73,9 @@ async function runTests() {
       process.exit(1);
     }
   } else {
-    console.log(`✅ Server already running on http://localhost:${SERVER_PORT}\n`);
+    console.log(
+      `✅ Server already running on http://localhost:${SERVER_PORT}\n`,
+    );
   }
 
   try {

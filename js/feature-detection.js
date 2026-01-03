@@ -146,12 +146,19 @@
         html.classList.add('browser-safari');
       } else if (userAgent.indexOf('Firefox') > -1) {
         html.classList.add('browser-firefox');
-      } else if (userAgent.indexOf('MSIE') > -1 || userAgent.indexOf('Trident') > -1) {
+      } else if (
+        userAgent.indexOf('MSIE') > -1 ||
+        userAgent.indexOf('Trident') > -1
+      ) {
         html.classList.add('browser-ie');
       }
 
       // Detect mobile
-      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent)) {
+      if (
+        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          userAgent,
+        )
+      ) {
         html.classList.add('is-mobile');
       } else {
         html.classList.add('is-desktop');
@@ -176,7 +183,10 @@
       this.detectBrowser();
 
       // Log feature support (only in development)
-      if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+      if (
+        window.location.hostname === 'localhost' ||
+        window.location.hostname === '127.0.0.1'
+      ) {
         console.log('Feature Detection Results:', {
           grid: this.checkGrid(),
           flexbox: this.checkFlexbox(),
@@ -229,12 +239,12 @@
       if (typeof predicate !== 'function') {
         throw new TypeError('predicate must be a function');
       }
-      var list = Object(this);
-      var length = list.length >>> 0;
-      var thisArg = arguments[1];
-      var value;
+      const list = Object(this);
+      const length = list.length >>> 0;
+      const thisArg = arguments[1];
+      let value;
 
-      for (var i = 0; i < length; i++) {
+      for (let i = 0; i < length; i++) {
         value = list[i];
         if (predicate.call(thisArg, value, i, list)) {
           return value;

@@ -35,10 +35,10 @@ async function testChrome() {
     console.log('✓ Test 3: Checking destinations grid...');
     const destinationsGrid = await driver.wait(
       until.elementLocated(By.id('destinations-grid')),
-      5000
+      5000,
     );
     const cards = await destinationsGrid.findElements(
-      By.className('destination-card')
+      By.className('destination-card'),
     );
     console.log(`  Found ${cards.length} destination cards`);
 
@@ -48,7 +48,7 @@ async function testChrome() {
     await locationSelect.sendKeys('Europe');
     await driver.sleep(1000);
     const cardsAfterFilter = await destinationsGrid.findElements(
-      By.className('destination-card')
+      By.className('destination-card'),
     );
     console.log(`  After filter: ${cardsAfterFilter.length} cards`);
 
@@ -56,7 +56,7 @@ async function testChrome() {
     console.log('✓ Test 5: Testing modal functionality...');
     const firstCard = cards[0];
     const viewDetailsBtn = await firstCard.findElement(
-      By.className('card-cta')
+      By.className('card-cta'),
     );
     await viewDetailsBtn.click();
     await driver.sleep(1000);

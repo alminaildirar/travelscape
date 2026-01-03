@@ -69,12 +69,15 @@
 
   function renderDestinations(destinationsToRender) {
     const grid = document.getElementById('destinations-grid');
-    if (!grid) return;
+    if (!grid) {
+      return;
+    }
 
     grid.innerHTML = '';
 
     if (destinationsToRender.length === 0) {
-      grid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; color: var(--color-text-light);">No destinations found matching your filters.</p>';
+      grid.innerHTML =
+        '<p style="grid-column: 1 / -1; text-align: center; color: var(--color-text-light);">No destinations found matching your filters.</p>';
       return;
     }
 
@@ -85,7 +88,7 @@
   }
 
   function sortDestinations(sortBy) {
-    let sorted = [...currentDestinations];
+    const sorted = [...currentDestinations];
 
     switch (sortBy) {
       case 'price-low':
@@ -132,8 +135,12 @@
   }
 
   function openModal(destinationId) {
-    const destination = destinations.find(d => d.id === parseInt(destinationId));
-    if (!destination) return;
+    const destination = destinations.find(
+      d => d.id === parseInt(destinationId),
+    );
+    if (!destination) {
+      return;
+    }
 
     const modal = document.getElementById('detail-modal');
     const modalBody = document.getElementById('modal-body');
@@ -168,12 +175,16 @@
         <div class="modal-amenities">
           <h4>Amenities</h4>
           <div class="amenities-list">
-            ${destination.amenities.map(amenity => `
+            ${destination.amenities
+              .map(
+                amenity => `
               <div class="amenity-item">
                 <span>✓</span>
                 <span>${amenity}</span>
               </div>
-            `).join('')}
+            `,
+              )
+              .join('')}
           </div>
         </div>
         <div class="modal-footer">
@@ -250,7 +261,7 @@
       modalOverlay.addEventListener('click', closeModal);
     }
 
-    document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && !modal.hasAttribute('hidden')) {
         closeModal();
       }

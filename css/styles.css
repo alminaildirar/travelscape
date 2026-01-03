@@ -1,10 +1,10 @@
 /* Import CSS Modules */
-@import url("reset.css");
-@import url("variables.css");
-@import url("base.css");
-@import url("components.css");
-@import url("responsive.css");
-@import url("fallbacks.css");
+@import url('reset.css');
+@import url('variables.css');
+@import url('base.css');
+@import url('components.css');
+@import url('responsive.css');
+@import url('fallbacks.css');
 
 /*
   Browser Support:

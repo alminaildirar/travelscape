@@ -32,7 +32,7 @@ module.exports = {
       'browserstack.local': 'true',
       'browserstack.debug': 'true',
       'browserstack.console': 'verbose',
-      name: 'Chrome on Windows 11'
+      name: 'Chrome on Windows 11',
     },
     {
       browserName: 'Firefox',
@@ -42,7 +42,7 @@ module.exports = {
       resolution: '1920x1080',
       'browserstack.local': 'true',
       'browserstack.debug': 'true',
-      name: 'Firefox on Windows 11'
+      name: 'Firefox on Windows 11',
     },
     {
       browserName: 'Edge',
@@ -52,7 +52,7 @@ module.exports = {
       resolution: '1920x1080',
       'browserstack.local': 'true',
       'browserstack.debug': 'true',
-      name: 'Edge on Windows 11'
+      name: 'Edge on Windows 11',
     },
     {
       browserName: 'Safari',
@@ -62,7 +62,7 @@ module.exports = {
       resolution: '1920x1080',
       'browserstack.local': 'true',
       'browserstack.debug': 'true',
-      name: 'Safari on macOS Ventura'
+      name: 'Safari on macOS Ventura',
     },
 
     // Mobile Devices
@@ -73,7 +73,7 @@ module.exports = {
       os_version: '16',
       'browserstack.local': 'true',
       'browserstack.debug': 'true',
-      name: 'Safari on iPhone 14 Pro'
+      name: 'Safari on iPhone 14 Pro',
     },
     {
       browserName: 'android',
@@ -82,7 +82,7 @@ module.exports = {
       os_version: '13.0',
       'browserstack.local': 'true',
       'browserstack.debug': 'true',
-      name: 'Chrome on Samsung Galaxy S23'
+      name: 'Chrome on Samsung Galaxy S23',
     },
     {
       browserName: 'iPad',
@@ -91,7 +91,7 @@ module.exports = {
       os_version: '16',
       'browserstack.local': 'true',
       'browserstack.debug': 'true',
-      name: 'Safari on iPad Pro'
+      name: 'Safari on iPad Pro',
     },
 
     // Legacy Browser Testing
@@ -104,8 +104,8 @@ module.exports = {
       'browserstack.local': 'true',
       'browserstack.debug': 'true',
       'browserstack.ie.enablePopups': 'true',
-      name: 'IE 11 on Windows 10 (Legacy)'
-    }
+      name: 'IE 11 on Windows 10 (Legacy)',
+    },
   ],
 
   // Common capabilities
@@ -115,10 +115,10 @@ module.exports = {
     'browserstack.networkLogs': 'true',
     'browserstack.console': 'verbose',
     project: 'TravelScape',
-    build: `Build ${new Date().toISOString().split('T')[0]}`
+    build: `Build ${new Date().toISOString().split('T')[0]}`,
   },
 
   // Test settings
   timeout: 30000,
-  retries: 2
+  retries: 2,
 };

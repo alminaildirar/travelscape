@@ -20,7 +20,7 @@ const MIME_TYPES = {
   '.png': 'image/png',
   '.gif': 'image/gif',
   '.svg': 'image/svg+xml',
-  '.ico': 'image/x-icon'
+  '.ico': 'image/x-icon',
 };
 
 const server = http.createServer((req, res) => {
@@ -47,7 +47,7 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(PORT, () => {
-  console.log(`\n🚀 Test Server Running`);
+  console.log('\n🚀 Test Server Running');
   console.log(`📍 http://localhost:${PORT}`);
-  console.log(`\nPress Ctrl+C to stop\n`);
+  console.log('\nPress Ctrl+C to stop\n');
 });

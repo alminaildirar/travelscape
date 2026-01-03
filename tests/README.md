@@ -5,6 +5,7 @@ This directory contains automated testing scripts for cross-browser compatibilit
 ## Prerequisites
 
 ### Required Software
+
 - **Node.js** 14.0.0 or higher
 - **npm** (comes with Node.js)
 
@@ -13,23 +14,27 @@ This directory contains automated testing scripts for cross-browser compatibilit
 **Chrome & Firefox**: Automatically managed by Selenium WebDriver (no manual installation needed)
 
 **Edge (Windows)**: Requires manual installation:
+
 1. Check Edge version: Menu `...` → Help and feedback → About Microsoft Edge
 2. Download matching driver from [Microsoft Edge WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/)
 3. Extract and place `msedgedriver.exe` in `WebBasics/drivers/` folder
 4. The test suite will automatically use this driver
 
 **Safari (macOS)**: Built-in driver, just enable:
+
 - Safari → Preferences → Advanced → "Show Develop menu"
 - Develop → Allow Remote Automation
 
 ## Installation
 
 1. Install dependencies:
+
 ```bash
 npm install
 ```
 
 This will install:
+
 - `selenium-webdriver` - Browser automation framework
 - `http-server` - Simple HTTP server for testing
 
@@ -38,6 +43,7 @@ This will install:
 ### Quick Start
 
 Run all tests on all available browsers:
+
 ```bash
 npm test
 ```
@@ -45,6 +51,7 @@ npm test
 ### Individual Browser Tests
 
 Test on specific browsers:
+
 ```bash
 npm run test:chrome     # Test on Chrome
 npm run test:firefox    # Test on Firefox
@@ -55,9 +62,11 @@ npm run test:edge       # Test on Edge
 ### Start Development Server
 
 Start the test server manually:
+
 ```bash
 npm run serve
 ```
+
 Server will run on `http://localhost:8080`
 
 ## Test Structure
@@ -94,6 +103,7 @@ BrowserStack allows testing on real devices and browsers in the cloud.
 2. Get your credentials from Account Settings
 
 3. Set environment variables:
+
 ```bash
 # Windows (PowerShell)
 $env:BROWSERSTACK_USERNAME="your_username"
@@ -107,6 +117,7 @@ export BROWSERSTACK_ACCESS_KEY="your_access_key"
 4. Edit `browserstack.config.js` and update capabilities as needed
 
 5. Install BrowserStack Local:
+
 ```bash
 npm install browserstack-local
 ```
@@ -114,22 +125,26 @@ npm install browserstack-local
 ### Configured Test Environments
 
 Desktop Browsers:
+
 - Chrome (latest) on Windows 11
 - Firefox (latest) on Windows 11
 - Edge (latest) on Windows 11
 - Safari (latest) on macOS Ventura
 
 Mobile Devices:
+
 - iPhone 14 Pro (iOS 16)
 - Samsung Galaxy S23 (Android 13)
 - iPad Pro 12.9 (iOS 16)
 
 Legacy:
+
 - Internet Explorer 11 on Windows 10
 
 ## Troubleshooting
 
 ### Server not starting
+
 ```bash
 # Check if port 8080 is in use
 # Windows
@@ -144,6 +159,7 @@ lsof -i :8080
 **Chrome/Firefox**: These should work automatically. If not, ensure browsers are installed and updated.
 
 **Edge**:
+
 ```bash
 # Check if driver exists
 ls drivers/msedgedriver.exe   # Should show the file
@@ -154,9 +170,11 @@ ls drivers/msedgedriver.exe   # Should show the file
 ```
 
 ### Tests timing out
+
 Increase timeout in test files or check network connection
 
 ### Safari tests not working (macOS)
+
 1. Open Safari
 2. Go to Safari → Preferences → Advanced
 3. Enable "Show Develop menu in menu bar"
